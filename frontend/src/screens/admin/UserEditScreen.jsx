@@ -35,7 +35,7 @@ const UserEditScreen = () => {
     e.preventDefault();
 
     try {
-      const res = await updateUser({ userId, name, email, isAdmin });
+      await updateUser({ userId, name, email, isAdmin });
 
       refetch();
       toast.success("User updated");
